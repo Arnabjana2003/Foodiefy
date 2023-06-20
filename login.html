@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  
+  <style>
+    
+    /* -----------------login------------- */
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4863A0;
+}
+body{
+  background: #E5E4E2;
+  font-family: 'Kanit', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+ul{
+  list-style: none;
+}
+.login{
+  width: 100%;
+  min-height: 100vh;
+}
+.login-img{
+  width: 100vw;
+  height: 65vh;
+  border-radius: 0 0 30px 30px;
+  overflow: hidden;
+  font-size: 2.5rem;
+  color: lightgray;
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  text-shadow: 2px 2px 4px black;
+}
+.login-text{
+  margin-top: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-text p{
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  transition: all 0.4s ease;
+}
+.login-text button, input{
+  border: none;
+  width: 100%;
+  margin-block: 10px;
+  font-size: 1rem;
+  padding: 10px 8px;
+  transition: all 0.4s ease;
+  
+}
+.login-text button{
+  margin-top: 10px;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 450;
+}
+
+.invisible{
+  padding: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+.invisible2{
+  display: none;
+}
+#login,#signin{
+  font-weight: 600;
+  text-decoration: underline;
+}
+.unable{
+  color: red !important;
+  opacity: 0.5;
+  font-size: 1rem !important;
+}
+    
+  </style>
+</head>
+
+<body>
+  
+  
+  <section class="login">
+  
+    <div class="login-img" style="background-image: url(login-img.jpg)">
+      <h1>Foodiefy</h1>
+    </div>
+    <div class="login-text">
+      
+      
+      <input id="name" type="name" placeholder="Your name">
+      <input type="number" placeholder="Enter Mobile no">
+      
+      
+      <button>Sign Up</button>
+      <p class="unable"></p>
+      <p id="loginText">Already have an account ? <span id="login">Log In</span></p>
+      <p id="signinText" class="invisible2">New user ?? <span id="signin">Sign In</span></p>
+    </div>
+  
+  </section>
+  
+  <script>
+    
+    const btn = document.querySelector('button');
+    btn.addEventListener('click', (e)=>{
+      const p = document.querySelector('.unable');
+      
+      if(e.target.innerText == "Sign Up"){
+      p.innerText = "Unable to Sign-in now"
+      }else{
+        p.innerText = "Unable to Log-in now"
+      }
+    });
+    
+    
+    const logIn = document.querySelector('#login');
+    logIn.addEventListener('click', ()=>{
+      document.querySelector('#name').classList.add('invisible');
+      document.querySelector('#loginText').classList.add('invisible2');
+      document.querySelector('#signinText').classList.remove('invisible2');
+      btn.innerText = "Log-In"
+      const p = document.querySelector('.unable');
+      p.innerText = "";
+    });
+    
+    
+    const signIn = document.querySelector('#signin');
+    signIn.addEventListener('click', ()=>{
+      document.querySelector('#name').classList.remove('invisible');
+      document.querySelector('#loginText').classList.remove('invisible2');
+      document.querySelector('#signinText').classList.add('invisible2');
+      btn.innerText = "Sign Up"
+      const p = document.querySelector('.unable');
+      p.innerText = "";
+    });
+    
+  </script>
+
+</body>
+
+</html>

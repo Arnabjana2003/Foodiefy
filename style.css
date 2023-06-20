@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #4863A0;
+}
+main{
+  background: #E5E4E2;
+  font-family: 'Kanit', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+ul{
+  list-style: none;
+}
+.invisible2{
+  display: none;
+}
+
+
+
+
+#pre-Loader{
+  width: 100vw;
+  height: 100vh;
+  background: var(--primary-color);
+  color: grey;
+  display: grid;
+  place-items: center;
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.left-nav{
+  display: flex;
+}
+.location{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.location p{
+  font-size: 0.8rem;
+  font-weight: 450;
+  opacity: 0.8;
+}
+.fa-angle-down{
+  margin: 10px 0 0 5px;
+}
+.fa-bars{
+  font-size: 1.3rem;
+  padding-right: 3px;
+  padding-top: 3px;
+}
+.nav-slide{
+  background: #123456;
+  height: 100vh;
+  width: fit-content;
+  position: fixed;
+  top: 0;
+  right: -200px;
+  padding-inline: 15px;
+  z-index: 2;
+  transition: 0.4s all ease;
+}
+.nav-slide-action{
+  right: 0;
+}
+.nav-slide li{
+  margin-block: 15px;
+  font-weight: 450;
+  color: #fff;
+}
+.nav-slide li i{
+  margin-right: 10px;
+}
+.fa-xmark{
+  padding: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+/* ----------------------------------------- */
+
+.search{
+  margin: 15px 10px;
+}
+input{
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 40px;
+  padding-inline: 7px;
+  border-radius: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
+  font-family: Arial, Helvetica;
+}
+
+/* 
+-------------------------------------------------- */
+.food-slide{
+  display: flex;
+  overflow: scroll;
+  margin-block: 40px;
+  border-block: 1.2px solid lightgrey;
+}
+.food-slide div{
+  min-width: 190px;
+  min-height: 150px;
+  background-size:cover;
+  margin: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-weight: 650;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 8px;
+}
+
+/* -------------------------------------------- */
+
+
+.restaurant-heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant-heading h5{
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: 0.9;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+.restaurant-heading p{
+  margin-bottom: 10px;
+  color: red;
+  opacity: 0.4;
+  font-weight: 500;
+}
+
+.restaurants-cards{
+  margin-block: 25px;
+  opacity: 0.5;
+}
+.cards{
+  width: 350px;
+  height: 350px;
+  margin-inline: auto;
+  margin-block: 45px;
+  border-radius: 10px;
+  background: lightgray;
+  overflow: hidden;
+}
+.rest-img{
+  width: 100%;
+  height: 70%;
+  background-size: cover;
+}
+.rest-img i{
+  padding: 8px;
+  font-weight: 600;
+}
+.rest-info{
+  padding: 10px 10px;
+  color: var(--primary-color);
+}
+.rest-info h4{
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.rest-info ul{
+  font-weight: 430;
+  opacity: 0.65;
+}
+
+.app-name{
+  font-size: 3rem;
+  font-weight: 700;
+  color: lightgrey;
+  padding: 5px;
+  margin: 10px 0 20px 20px;
+}
+footer{
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+}
